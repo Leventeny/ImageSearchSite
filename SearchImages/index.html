@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Search for Images by Keyword</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <h4>
+        This is a site to search for images with Unplash API
+      </h4>
+      <div>
+        Enter a keyword and click search
+      </div>
+    </header>
+    <div class="main">
+      <div class="searchBar">
+        <form action="">
+          <label for="keyword">Search</label>
+          <input type="text" id="keyword" name="keyword" placeholder="office">
+        </form>
+        <div class="">
+          <button class="searchButton" id="searchButton" >Search</button>
+        </div>
+      </div>
+      <div class="cardsContainer">
+        
+      </div>
+
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
