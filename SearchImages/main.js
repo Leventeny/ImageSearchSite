@@ -16,9 +16,17 @@ let loadImages = async (keyword) => {
   images = await getImages(keyword);
   console.log(images);
   console.log(images[13]);
+
+  createCards(numberOfCards);
 }
 
 let numberOfCards = 5;
+
+//lazy load
+// let displayedCards = cardsToDisplay;
+// let startFromIndex = displayedCards - cardsToDisplay;
+//window.onScroll with a for
+
 
 const createCards = (numberOfCards) => {
   let containerElement = document.querySelector('.cardsContainer');
@@ -28,19 +36,18 @@ const createCards = (numberOfCards) => {
     containerElement.appendChild(card);
 
     let imgEl = document.getElementsByClassName("img")[i].children[0];
-    imgEl.src = `${imgs[i]}`;
-  
-    // loadElementsIntoCard(i);
+    imgEl.src = `${images[i]}`;
   }
 };
 
-// document.addEventListener('DOMContentLoaded', createCards(numberOfCards));
+//no reset is there
+
+//TESTING TESTING
 
 
 
 
-
-  // https://unsplash.com/oauth/applications/270505
+// https://unsplash.com/oauth/applications/270505
 //chrome.exe --disable-web-security
 
 // https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome?fbclid=IwAR2o7DRNxkwpadEwg98Up0sdy5ctYszE5XiQUAyfwAo99s-zNqzoLJWwhhA

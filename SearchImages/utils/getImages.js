@@ -1,5 +1,5 @@
 export let getImages = async (keyword) => {
-  let url = `https://api.unsplash.com/photos?page=1&per_page=30&orientation=portrait&query=${keyword}`;
+  let url = `https://api.unsplash.com/photos?&query=${keyword}`;
   let json = [];
   let images = [];
 
@@ -10,8 +10,9 @@ export let getImages = async (keyword) => {
   });
   
   if (response.ok) {
+
     json = await response.json();
-    console.log(response);
+    console.log(json.results);
   } else {
     console.log("HTTP-Error: ");
   }
